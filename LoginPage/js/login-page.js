@@ -3,9 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
-   $(window, document, undefined).ready(function() {
+$(window, document, undefined).ready(function() {
 
   $('input').blur(function() {
     var $this = $(this);

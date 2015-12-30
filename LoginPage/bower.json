@@ -1,6 +1,6 @@
 {
   "name": "LoginPage",
-  "homepage": "https://github.com/1hemant/NetBeansProjects",
+  "homepage": "https://github.com/1hemant/ToGit",
   "authors": [
     "1hemant"
   ],
@@ -17,12 +17,6 @@
   ],
   "dependencies": {
     "polymer": "Polymer/polymer#^1.2.0",
-    "paper-input": "PolymerElements/paper-input#~1.1.3",
-    "paper-toggle-button": "PolymerElements/paper-toggle-button#~1.0.13",
-    "core-ajax": "polymer/core-ajax#~0.5.6"
-  },
-  "resolutions": {
-    "polymer": "^0.5",
-    "webcomponentsjs": "^0.6.0"
+    "paper-button": "PolymerElements/paper-button#~1.0.11"
   }
 }
