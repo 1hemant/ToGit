@@ -4,40 +4,35 @@
 <link rel="import" href="../bower_components/paper-button/paper-button.html" />
 <link rel="import" href="../bower_components/paper-input/paper-input.html" />
 <link rel="import" href="../bower_components/iron-form/iron-form.html" />
+<link rel="import" href="../bower_components/paper-ripple/paper-ripple.html" />
 <dom-module id="login-page" attributes="url">
     <script>var url = "https://uat-analytics.thecarecloud.com/netlink/j_spring_security_check"</script>
         <template>
             <hgroup>
               <h1>Netlink Login Form</h1>
             </hgroup>
-            <form form is="iron-form" id="form" method="post" action="/form/handler">
+            <form form is="iron-form" id="form" method="post" action="https://uat-analytics.thecarecloud.com/netlink/j_spring_security_check">
                 <div><paper-input id="txtUsername" label="Username" value="{{username}}" floatinglabel></paper-input></div>
                 <div><paper-input id="txtPassword" label="Password" type="password" value="{{password}}" floatinglabel></paper-input></div>
                 <div>
-                <paper-button raised on-click="submitForm()" >Log in</paper-button> 
+                <paper-button type="submit" label="Custom Submit" raised>Log In</paper-button> 
                 </div>
             </form>
-            <footer><a href="http://www.polymer-project.org/" target="_blank"><img src="../images/Netlink_logo.png"></a>
+            <footer><a href="http://www.polymer-project.org/" target="_blank"><img src="../images/Netlink_logo.png" ></a>
               <p>You Gotta Love <a href="http://www.netlink.com/" target="_blank">Netlink</a></p>
             </footer>
-            <core-ajax id="ajax" auto="false" method="POST" url="{{url}}" params="{{item}}" response="{{response}}"></core-ajax>
-    <template repeat="{{response}}">{{data}}</template>
+           
+    
         </template>                          
   
-        <template bind if="{{isLoggedIn}}">
-            <div id="loggedin" vertical layout>
-                <div>You are logged in as {{baasicUser.userName}}</div>
-                <div>
-                    <paper-button on-click="{{logOut}}" raised>Log out</paper-button>
-                </div>
-            </div>
-        </template>
+
     
     <script>
         Polymer({
            is: "login-page",
             submitForm: function(){
                  document.getElementById('form').submit();
+                 console.log("Submitted");
              }
         });
     </script>
